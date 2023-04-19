@@ -1,0 +1,82 @@
+.sign-up {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+.img {
+    background-image: url(../../../public/img/pexels-anna-shvets-4226122.jpg);
+    height: 100vh;
+    width: 60vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.signUp {
+    padding: 6rem 0 0.8rem 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.descr {
+    padding-bottom: 4rem;
+    font-size: 0.7rem;
+    color: #272727;
+}
+
+.form-input {
+
+    .Email {
+        color: #565656;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    #email {
+        padding: .6rem 8rem;
+        margin-bottom: 1.8rem;
+        margin-top: .3rem;
+        background-color: #EEF0F6;
+        border-radius: 2px;
+        border: none;
+    }
+
+    .psswd {
+        color: #565656;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    #psswd {
+        padding: .6rem 8rem;
+        margin-bottom: .8rem;
+        margin-top: .3rem;
+        background-color: #EEF0F6;
+        border-radius: 2px;
+        border: none;
+    }
+
+    .checkBoxDesc {
+        padding: .3rem 0 0 0 ;
+        font-size: .8rem;
+    }
+
+    .createAccount {
+        margin: 3rem 0 5rem 0;
+        padding: 1.2rem 9rem;
+        color: #F7F6F9;
+        background-color: #164DAC;
+        border: none;
+    }
+    .createAccount:hover {
+        cursor: pointer;
+        background-color: #164dacb6;
+    }
+}
+
+.login {
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+} 
