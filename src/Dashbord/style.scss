@@ -1,0 +1,71 @@
+.dashbord {
+    margin: 1.4rem 0 0 .2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+
+    .social-side-icons {
+        background-color: #0000ff24;
+        padding: 10rem 0 0 2rem;
+        width: 5vw;
+    }
+    
+    .icons-info-style {
+        padding: 3rem 0 2rem 0;
+        font-size: 1.2rem;
+        color: #22293d;
+    }
+    .icons-info-style:hover {
+        color: #2b385b;
+    }
+
+    .dash-container {
+        background-color: #ffa4b347;
+        width: 100vw;
+        border-radius: 2rem;
+
+        .header-img {
+            background-image: url(../../public/img/pexels-anna-shvets-4226122.jpg);
+            height: 30vh;
+            border-radius: .7rem;
+            background-size: cover;
+        }
+    }
+
+    .dash-ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.8rem;
+        padding-left: 1.8rem;
+        padding-top: .8rem;
+        
+        .dash-li {
+        text-decoration: none;
+        font-weight: 500;
+        color: #303545;
+        }
+    }
+    
+    .dash-info-containerDivs {
+        background-color: #3fb8b83b;
+        height: 50vh;
+        margin: 1rem 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .col1 {
+            width: 30vw;
+            background-color: antiquewhite;
+        }
+
+        .col2 {
+            width: 30vw;
+            background-color: #eebf83;
+        }
+
+        .col3 {
+            width: 30vw;
+            background-color: #a76207;
+        }
+    }
+}
