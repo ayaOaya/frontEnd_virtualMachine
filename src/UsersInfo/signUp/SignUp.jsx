@@ -17,6 +17,7 @@ const SignUp = () => {
         <input type="password" name="password" id="psswd" />
         <div className="check">
             {/* make a chebox here */}
+            <input type="radio"/>
             <p className="checkBoxDesc">I agree to the term of service</p>
         </div>
         <button type="submit" className="createAccount">Create Account</button>

@@ -5,30 +5,32 @@
     flex-direction: row;
 
     .social-side-icons {
-        background-color: #0000ff24;
-        padding: 10rem 0 0 2rem;
+        /* background-color: #0000ff24; */
+        padding: 8rem 0 0 2rem;
         width: 5vw;
     }
     
     .icons-info-style {
-        padding: 3rem 0 2rem 0;
+        padding: 3rem 0 1rem 0;
         font-size: 1.2rem;
         color: #22293d;
     }
     .icons-info-style:hover {
-        color: #2b385b;
+        color: #167c7c5b;
     }
 
     .dash-container {
-        background-color: #ffa4b347;
+        /* background-color: #ffa4b347; */
         width: 100vw;
+        height: 90vh;
         border-radius: 2rem;
 
         .header-img {
-            background-image: url(../../public/img/pexels-anna-shvets-4226122.jpg);
+            background-image: url(../../public/img/abyan-athif-K0U0eSAjFGU-unsplash.jpg);
             height: 30vh;
             border-radius: .7rem;
             background-size: cover;
+            background-position: center;
         }
     }
 
@@ -54,18 +56,18 @@
         grid-template-columns: 1fr 1fr 1fr;
 
         .col1 {
-            width: 30vw;
-            background-color: antiquewhite;
+            width: 31vw;
+            background-color: #faebd752;
         }
 
         .col2 {
-            width: 30vw;
-            background-color: #eebf83;
+            width: 31vw;
+            background-color: #eec08382;
         }
 
         .col3 {
             width: 30vw;
-            background-color: #a76207;
+            background-color: #a762073f;
         }
     }
 }

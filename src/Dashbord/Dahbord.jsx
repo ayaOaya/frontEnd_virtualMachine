@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faClipboard } from "@fortawesome/free-solid-svg-icons" 
  import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons" 
  import { faFolderOpen } from "@fortawesome/free-solid-svg-icons" 
+ import { faVideo } from "@fortawesome/free-solid-svg-icons" 
  
 
 import "./style.scss"
@@ -20,6 +21,7 @@ const Dahbord = () => {
       <a href=""><FontAwesomeIcon icon={faClipboard} className='icons-info-style'/></a> <br />
       <a href=""><FontAwesomeIcon icon={faEnvelopeOpen} className='icons-info-style'/></a> <br />
       <a href=""><FontAwesomeIcon icon={faFolderOpen} className='icons-info-style'/></a> <br />
+      <a href=""><FontAwesomeIcon icon={faVideo} className='icons-info-style'/></a> <br />
       </div>
 
       <div className="dash-container">
@@ -27,10 +29,10 @@ const Dahbord = () => {
         <div className="header-image-titles"></div>
         <div className="dash-links">
           <ul className='dash-ul'>
-            <li><a className='dash-li' href="">All tasks</a></li>
-            <li><a className='dash-li' href="">By status</a></li>
-            <li><a className='dash-li' href="">By assigne</a></li>
-            <li><a className='dash-li' href="">My tasks</a></li>
+            <li><a className='dash-li' href="">All Tasks</a></li>
+            <li><a className='dash-li' href="">By Status</a></li>
+            <li><a className='dash-li' href="">By Assigne</a></li>
+            <li><a className='dash-li' href="">My Tasks</a></li>
             <li><a className='dash-li' href="">Due Dates</a></li>
           </ul>
         </div>
