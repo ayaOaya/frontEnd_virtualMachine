@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons" 
  import { faFolderOpen } from "@fortawesome/free-solid-svg-icons" 
  import { faVideo } from "@fortawesome/free-solid-svg-icons" 
- 
+ import dashbordProps from '../props/dashBordProps'
 
 import "./style.scss"
 
@@ -38,9 +38,50 @@ const Dahbord = () => {
         </div>
 
         <div className="dash-info-containerDivs">
-          <div className="col1"></div>
-          <div className="col2"></div>
-          <div className="col3"></div>
+          {/* Here add props to each*/}
+          <div className="col1">
+          {/* <dashbordProps /> */}
+          <div className="title-col1">Back Log</div>
+          <div className="eachDiv-container">
+            <h2>Landing Page stuff</h2>
+
+            <div className="contents-meeting">
+              <div className="content1"></div>
+              <div className="content2"></div>
+              <div className="content3"></div>
+            </div>
+            <div className="profile-pics"></div>
+          </div>
+
+          </div>
+          <div className="col2">
+          <div className="title-col2">In Progress</div>
+          <div className="eachDiv-container">
+            <h2>Landing Page stuff</h2>
+
+            <div className="contents-meeting">
+              <div className="content1"></div>
+              <div className="content2"></div>
+              <div className="content3"></div>
+            </div>
+            <div className="profile-pics"></div>
+          </div>
+
+          </div>
+          <div className="col3">
+          <div className="title-col3">On Hold</div>
+
+          <div className="eachDiv-container">
+            <h2>Landing Page stuff</h2>
+            <div className="contents-meeting">
+              <div className="content1"></div>
+              <div className="content2"></div>
+              <div className="content3"></div>
+            </div>
+            <div className="profile-pics"></div>
+          </div>
+          
+          </div>
         </div>
       </div>
     </div>

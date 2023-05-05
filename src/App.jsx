@@ -2,7 +2,7 @@ import SignUp from "../src/UsersInfo/signUp/SignUp"
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Lenis from '@studio-freight/lenis';
 import LogIn from "./UsersInfo/logIn/LogIn";
-import Dahbord from "./Dashbord/Dahbord";
+import Dahbord from "./Dashbord/Dashbord";
 import './App.css'
 
 
@@ -35,7 +35,7 @@ function App() {
 
       <Route path="/login" element={<LogIn />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/dash" element={<Dahbord />} />
+      <Route path="/" element={<Dahbord />} />
       
       </Routes>
 
