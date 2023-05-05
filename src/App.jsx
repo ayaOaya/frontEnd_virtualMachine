@@ -5,8 +5,13 @@ import LogIn from "./UsersInfo/logIn/LogIn";
 import Dahbord from "./UsersInfo/Dashbord/Dashbord";
 import PublicPage from "./UsersInfo/PublicPage/PublicPage";
 import UsersStatus from "./UsersInfo/UsersStatus/UsersStatus";
-import NotesList from "./features/notes/NotesList";
+import NotesList from "./features/notes/notesList";
 import UsersLists from "./features/users/usersLists";
+import EditUser from "./features/users/EditUser";
+import NewUserForm from "./features/users/NewUserForm";
+import EditNote from "./features/notes/EditNote";
+import NewNote from "./features/notes/NewNote";
+import Prefetch from "./features/auth/Prefetch";
 import './App.css'
 
 
@@ -43,13 +48,23 @@ function App() {
       <Route path="/dash" element={<Dahbord />} />
       <Route path="/usersstatus" element={<UsersStatus />} />
 
-      <Route path="/notes" >
-      <Route index element={<NotesList />} />
+
+
+    <Route element={<Prefetch />}>
+
+    <Route path="/users" >
+      <Route index element={<UsersLists />} />
+      <Route path=":id" element={<EditUser />} />
+      <Route path="new" element={<NewUserForm />} />
       </Route>
 
-      <Route path="/users" >
-      <Route index element={<UsersLists />} />
+      <Route path="/notes" >
+      <Route index element={<NotesList />} />
+      <Route path=":id" element={<EditNote />} />
+      <Route path="new" element={<NewNote />} />
       </Route>
+
+    </Route>
       
       </Routes>
 
@@ -57,5 +72,4 @@ function App() {
     </>
   )
 }
-
-export default App
+export default App   
