@@ -2,7 +2,11 @@ import SignUp from "../src/UsersInfo/signUp/SignUp"
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Lenis from '@studio-freight/lenis';
 import LogIn from "./UsersInfo/logIn/LogIn";
-import Dahbord from "./Dashbord/Dashbord";
+import Dahbord from "./UsersInfo/Dashbord/Dashbord";
+import PublicPage from "./UsersInfo/PublicPage/PublicPage";
+import UsersStatus from "./UsersInfo/UsersStatus/UsersStatus";
+import NotesList from "./features/notes/NotesList";
+import UsersLists from "./features/users/usersLists";
 import './App.css'
 
 
@@ -33,9 +37,19 @@ function App() {
 
       <Routes>
 
+      <Route path="/" element={<PublicPage />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/" element={<Dahbord />} />
+      <Route path="/dash" element={<Dahbord />} />
+      <Route path="/usersstatus" element={<UsersStatus />} />
+
+      <Route path="/notes" >
+      <Route index element={<NotesList />} />
+      </Route>
+
+      <Route path="/users" >
+      <Route index element={<UsersLists />} />
+      </Route>
       
       </Routes>
 
