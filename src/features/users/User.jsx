@@ -15,6 +15,7 @@ const User = ({ userId }) => {
 
         const userRolesString = user.roles.toString().replaceAll(',', ', ')
 
+        // To know if the user is active
         const cellStatus = user.active ? '' : 'table__cell--inactive'
 
         return (
