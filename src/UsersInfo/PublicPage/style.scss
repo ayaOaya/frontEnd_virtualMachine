@@ -1,0 +1,106 @@
+.public-page {
+    background-color: #F6FAFF;
+    height: 100vh;
+    width: auto;
+
+    .navbar {
+        padding: 1rem 4rem 0 8rem; 
+        display: flex;
+        flex-direction: row;
+        gap: 9rem;
+
+        .logo {
+            color: #1F5FFE;
+            font-weight: 700;
+        }   
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            padding-left: 18rem;
+
+            .li a{
+                text-decoration: none;
+                color: #030916bd;
+                font-weight: 400;
+            }
+        }
+
+        .nav-btn-join {
+            padding: 0 0 0 10rem;
+
+            .search-icon {
+                padding-right: 1.7rem;
+            }
+
+            .join a{
+                text-decoration: none;
+                background-color: transparent;
+                border-width: 20px;
+
+            }
+            .join {
+                padding: 3px 30px;
+                background-color: transparent;
+                border-width: 2.9px;
+
+            }
+        }
+    }
+
+    .header {
+
+        .title {
+            text-align: center;
+            padding: 2.5rem 0 0 0;
+            font-size: 7.3rem;
+            color: #041234;
+            font-weight: bold;
+        }
+
+        .signUp a{
+            text-decoration: none;
+            color: #F6FAFF;
+        }
+
+        .signUp {
+            position: absolute;
+            top: 22rem;
+            left: 40rem;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 2px;
+            background-color: #1F5FFE;
+        }
+
+        .desc {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: .8rem;
+        }
+
+        .headers-icons {
+            margin: 1rem 0 0 44rem;
+
+            .user-icon {
+                padding-left: 1.4rem;
+            }
+        }
+
+        .second-parag {
+            display: flex;
+            margin: 6rem 0 0 33rem;
+            gap: 1rem;
+            font-size: .9rem;
+
+            .register a{
+                text-decoration: none;
+                background-color: #041234;
+                color: #F6FAFF;
+                border: none;
+                padding: 6px 18px;
+            }
+        }
+    }
+}
