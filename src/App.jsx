@@ -5,13 +5,14 @@ import LogIn from "./UsersInfo/logIn/LogIn";
 import Dahbord from "./UsersInfo/Dashbord/Dashbord";
 import PublicPage from "./UsersInfo/PublicPage/PublicPage";
 import UsersStatus from "./UsersInfo/UsersStatus/UsersStatus";
-import NotesList from "./features/notes/notesList";
+import NotesList from "./features/notes/NotesList";
 import UsersLists from "./features/users/usersLists";
 import EditUser from "./features/users/EditUser";
 import NewUserForm from "./features/users/NewUserForm";
 import EditNote from "./features/notes/EditNote";
 import NewNote from "./features/notes/NewNote";
 import Prefetch from "./features/auth/Prefetch";
+import PersistLogin from "./features/auth/PersistLogin";
 import './App.css'
 
 
@@ -50,6 +51,7 @@ function App() {
 
 
 
+    <Route element={<PersistLogin />}>
     <Route element={<Prefetch />}>
 
     <Route path="/users" >
@@ -64,6 +66,7 @@ function App() {
       <Route path="new" element={<NewNote />} />
       </Route>
 
+    </Route>
     </Route>
       
       </Routes>

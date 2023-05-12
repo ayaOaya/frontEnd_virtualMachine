@@ -21,7 +21,7 @@ const PersistLogin = () => {
         error
     }] = useRefreshMutation()
 
-
+    // handeling react strict mode
     useEffect(() => {
 
         if (effectRan.current === true || process.env.NODE_ENV !== 'development') { // React 18 Strict Mode
