@@ -7,25 +7,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faFolderOpen } from "@fortawesome/free-solid-svg-icons" 
  import { faVideo } from "@fortawesome/free-solid-svg-icons" 
  import dashbordProps from '../Props/dashBordProps'
+ import useAuth from '../../hooks/useAuth'
 
 import "./style.scss"
 
 
 const Dahbord = () => {
+  const { username, isManager, isAdmin} = useAuth()
   return (
     <>
     <div className="dashbord">
       <div className="social-side-icons">
       <a  href="/"><FontAwesomeIcon icon={faHouse} className='icons-info-style'/></a> <br />
       <a href="/usersstatus"><FontAwesomeIcon icon={faUser} className='icons-info-style'/></a> <br />
-      <a href=""><FontAwesomeIcon icon={faClipboard} className='icons-info-style'/></a> <br />
+      {(isAdmin || isAdmin) && <a href=""><FontAwesomeIcon icon={faClipboard} className='icons-info-style'/></a>} <br />
       <a href=""><FontAwesomeIcon icon={faEnvelopeOpen} className='icons-info-style'/></a> <br />
       <a href=""><FontAwesomeIcon icon={faFolderOpen} className='icons-info-style'/></a> <br />
       <a href=""><FontAwesomeIcon icon={faVideo} className='icons-info-style'/></a> <br />
       </div>
 
       <div className="dash-container">
-        <div className="header-img"></div>
+        <div className="header-img"> Welcom {username}</div>
         <div className="header-image-titles"></div>
         <div className="dash-links">
           <ul className='dash-ul'>
