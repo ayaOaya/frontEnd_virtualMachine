@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Lenis from '@studio-freight/lenis';
 import LogIn from "./UsersInfo/logIn/LogIn";
 import Dahbord from "./UsersInfo/Dashbord/Dashbord";
-import PublicPage from "./UsersInfo/PublicPage/PublicPage";
+import PublicPage from "./UsersInfo/PublicPage/headerPage/PublicPage";
 import UsersStatus from "./UsersInfo/UsersStatus/UsersStatus";
 import NotesList from "./features/notes/NotesList";
 import UsersLists from "./features/users/usersLists";

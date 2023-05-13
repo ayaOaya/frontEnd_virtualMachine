@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCalendarPlus, faUser, faBell} from "@fortawesome/free-solid-svg-icons" 
 import "./style.scss"
+import Info from '../info/Info'
+
 
 const PublicPage = () => {
   return (
@@ -39,6 +41,7 @@ const PublicPage = () => {
             </div>
           </div>
         </div>
+        <Info />
     </>
   )
 }
