@@ -11,10 +11,12 @@ const initialState = usersAdapter.getInitialState()
 export const usersApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
         getUsers: builder.query({
-            query: () => '/users',
-            validateStatus: (response, result) => {
-                return response.status === 200 && !result.isError
-            },
+            query: () => ({
+                url: '/users',
+                validateStatus: (response, result) => {
+                    return response.status === 200 && !result.isError
+                },
+            }),
             transformResponse: responseData => {
                 const loadedUsers = responseData.map(user => {
                     user.id = user._id
@@ -47,16 +49,16 @@ export const usersApiSlice = apiSlice.injectEndpoints({
             query: initialUserData => ({
                 url: '/users',
                 method: 'PATCH',
-                body: { // here we re spereading fall initialUserData
+                body: {
                     ...initialUserData,
                 }
             }),
             invalidatesTags: (result, error, arg) => [
-                { type: 'User', id: arg.id } // arg: is for invalidating the id that needs update
+                { type: 'User', id: arg.id }
             ]
         }),
         deleteUser: builder.mutation({
-            query: ({ id }) => ({ // for deleting we only need id
+            query: ({ id }) => ({
                 url: `/users`,
                 method: 'DELETE',
                 body: { id }
