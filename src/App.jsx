@@ -13,14 +13,16 @@ import EditNote from "./features/notes/EditNote";
 import NewNote from "./features/notes/NewNote";
 import Prefetch from "./features/auth/Prefetch";
 import PersistLogin from "./features/auth/PersistLogin";
+import RequireAuth from "./features/auth/RequireAuth";
+import { ROLES } from "./config/Roles";
 import './App.css'
 
 
 const lenis = new Lenis({
   duration: 1.2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   direction: 'vertical',
-  gestureDirection: 'vertical', 
+  gestureDirection: 'vertical',
   smooth: true,
   mouseMultiplier: 1,
   smoothTouch: false,
@@ -36,40 +38,46 @@ requestAnimationFrame(raf)
 function App() {
   return (
     <>
-    <Router>
+      <Router>
 
-    <Link to='/'></Link>
-    <Link to="/login"></Link>
+        <Link to='/'></Link>
+        <Link to="/login"></Link>
 
-      <Routes>
+        <Routes>
 
-      <Route path="/" element={<PublicPage />} />
-      <Route path="/login" element={<LogIn />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/dash" element={<Dahbord />} />
-      <Route path="/usersstatus" element={<UsersStatus />} />
+          <Route path="/" element={<PublicPage />} />
+
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/dash" element={<Dahbord />} />
+          <Route path="/usersstatus" element={<UsersStatus />} />
 
 
 
-    <Route element={<PersistLogin />}>
-    <Route element={<Prefetch />}>
+          <Route element={<PersistLogin />}>
+            <Route element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}>
+              <Route element={<Prefetch />}>
 
-    <Route path="/users" >
-      <Route index element={<UsersLists />} />
-      <Route path=":id" element={<EditUser />} />
-      <Route path="new" element={<NewUserForm />} />
-      </Route>
+                <Route element={<RequireAuth allowedRoles={[ROLES.Admin, ROLES.Manager]} />}>
 
-      <Route path="/notes" >
-      <Route index element={<NotesList />} />
-      <Route path=":id" element={<EditNote />} />
-      <Route path="new" element={<NewNote />} />
-      </Route>
+                  <Route path="/users" >
+                    <Route index element={<UsersLists />} />
+                    <Route path=":id" element={<EditUser />} />
+                    <Route path="new" element={<NewUserForm />} />
+                  </Route>
 
-    </Route>
-    </Route>
-      
-      </Routes>
+                  <Route path="/notes" >
+                    <Route index element={<NotesList />} />
+                    <Route path=":id" element={<EditNote />} />
+                    <Route path="new" element={<NewNote />} />
+                  </Route>
+                </Route>
+
+              </Route>
+            </Route>
+          </Route>
+
+        </Routes>
 
       </Router>
     </>

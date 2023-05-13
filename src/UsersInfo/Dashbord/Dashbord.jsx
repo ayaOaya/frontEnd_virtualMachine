@@ -45,7 +45,7 @@ const Dahbord = () => {
           {/* <dashbordProps /> */}
           <div className="title-col1">Back Log</div>
           <div className="eachDiv-container">
-            <h2>Landing Page stuff</h2>
+            <h2>Landing Page stuff</h2>    
 
             <div className="contents-meeting">
               <div className="content1"></div>
